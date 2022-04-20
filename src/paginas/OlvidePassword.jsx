@@ -16,32 +16,27 @@ const OlvidePassword = () => {
                             placeholder="Ingrese su mail"
                             className="border w-full p-3 mt-3 bg-gray-50 rounded-xl md:w-12/12"></input>
                     </div>  
-                    <div className="my-5">
-                        <label className="uppercase text-gray-600 block text-xl font-bold">
-                            Password
-                        </label>
-                        <input
-                            type='password'
-                            placeholder="Ingrese su Contraseña"
-                            className="border w-full p-3 mt-3 bg-gray-50 rounded-xl md:w-12/12"></input>
-                    </div>
+                 
                     <div className='w-full h-auto flex justify-center'>
                     
                         <input 
                             type="submit"
-                            value="iniciar Sesión"
-                            className="bg-emerald-300 w-full py-3 px-12 rounded-xl text-white uppercase font-bold mt-5  hover:cursor-pointer hover:bg-emerald-400 md:w-4/5"></input>
+                            value="Recuperar contraseña Aquí"
+                            className="bg-emerald-300 w-full py-3 px-12 rounded-xl text-white uppercase font-bold mt-5  hover:cursor-pointer hover:bg-emerald-400 md:w-4/5">
+
+                        </input>
                     </div>
                 </form>
                 <nav className='py-4 lg:flex  lg:justify-between'>
+                   
+                    <Link to="../" 
+                        title='Recuperar Contraseña'
+                        className='block text-center my-5 text-gray-500 w-full md:w-3/7'
+                        >¿Tienes una cuenta? Ingresa Aquí</Link>
                     <Link to="../Registrar" 
-                            title='Registrar'
-                            className='block text-center my-5 text-gray-500 w-full md:w-3/11'
-                            >¿No tienes una cuenta? Registrate Aquí</Link>
-                    <Link to="../olvidePassword" 
-                            title='Recuperar Contraseña'
-                            className='block text-center my-5 text-gray-500 w-full md:w-3/7'
-                            >¿Olvido su Contraseña?, restablezca Aqui</Link>
+                        title='Registrar'
+                        className='block text-center my-5 text-gray-500 w-full md:w-3/11'
+                        >¿No tienes una cuenta? Registrate Aquí</Link>
                 </nav>
             </div>
         </>
