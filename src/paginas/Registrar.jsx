@@ -33,16 +33,12 @@ const Registrar = () => {
 
         // crear usuario en la api
         try {
-           
             const respuesta =  await clienteAxios.post('registrar', { nombre, email, password});
-            setAlerta({ msg: 'Usuario creado correctamente, Revise su email', error:false})
+            setAlerta({ msg: 'Usuario creado correctamente, Revise su email', error:false});
         }catch(error) {
             console.log(error);
             setAlerta({ msg: error.response.data.msg, error:true})
-            
-
         }
-        
     }
 
     const { msg } = alerta;
@@ -53,12 +49,14 @@ const Registrar = () => {
               <h2 className="text-emerald-300 font-black text-5xl md:text-7xl">Crea tu cuenta y administra tus <span className="text-emerald-600">Pacientes</span></h2>
             </div>
             <div className='mt-20 md:mt-5 shadow-lg px-5 py-10 mr-12 rounded-xl bg-white'>
-               
+                <div className="flex justify-center ">
+                 <h1 className='uppercase text-gray-600 block text-3xl font-bold mb-3'>Registro</h1>
+                 </div>
                 { msg && <Alert alert={alerta}/>}
                 
                 <form className='mr-5 h-auto' onSubmit={handleSubmit}>
                     <div className="my-5">
-                        <label className="uppercase text-gray-600 block text-base font-bold">
+                        <label className="uppercase text-gray-600 block text-base font-bold ">
                             Nombre
                         </label>
                     <input
