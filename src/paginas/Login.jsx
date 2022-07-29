@@ -29,7 +29,6 @@ const Login = () => {
             const url = 'login';
             const data = await clienteAxios.post(url, { email, password});
             localStorage.setItem('DATA_UTOKEN', data.data.token);
-
             navigate("./admin");
         }catch(ex){
             setAlerta({msg: ex.response.data.msg, error: true});

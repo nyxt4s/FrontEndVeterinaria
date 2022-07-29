@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
 // layout
 import AuthLayout from './layout/AuthLayout'
-import RouteProtected from './layout/routeProtected'
+import RouteProtected from './layout/routeProtected.jsx'
 // pages
 import Login from './paginas/Login'
 import ConfirmarCuenta from './paginas/ConfirmarCuenta'
@@ -16,9 +16,7 @@ function App() {
 
 
   return (
-
     <BrowserRouter>
-    
         <AuthProvider>
             <Routes>
               <Route path='/' element={<AuthLayout/>}>
@@ -28,8 +26,6 @@ function App() {
                   <Route path='OlvidePassword/:token' element={<OlvidePasswordP2/>}></Route>
                   <Route path='confirmar/:id' element={<ConfirmarCuenta/>}></Route>
               </Route>
-         
-
               <Route path='/admin' element={<RouteProtected/>}>
                   <Route index element={<Administrador/>}></Route>
               </Route>

@@ -1,8 +1,9 @@
+
 const Administrador = ()=>{
 
     return (
         <>
-        <h1>esta es una ruta adminsitrador</h1>
+            <h1>Pagina administrador</h1>
         </>
     )
 }
